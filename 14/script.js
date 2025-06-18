@@ -95,23 +95,68 @@
 // };
 
 //Flipping img
-let arr =
-[
-  [1,0,0],
-  [1,1,0]
-  [0,1,0]
-]
-for(let i=0;i<arr.length;i++)
-{
-  let left = 0;
-  let right = arr.length-1;
-  while(left<right)
-  {
-        let temp = arr[i][left];
-        arr[i][left] = arr[i][right];
-        arr[i][right] = temp;
-        left++;
-        right--;
-  }
-}
-console.log(arr);
+// let arr =
+// [
+//   [1,0,0],
+//   [1,1,0]
+//   [0,1,0]
+// ]
+// for(let i=0;i<arr.length;i++)
+// {
+//   let left = 0;
+//   let right = arr.length-1;
+//   while(left<right)
+//   {
+//         let temp = arr[i][left];
+//         arr[i][left] = arr[i][right];
+//         arr[i][right] = temp;
+//         left++;
+//         right--;
+//   }
+// }
+// console.log(arr);
+
+// Maximum Difference Between Increasing Elements.
+// brute force approach
+// function maxdiff(arr)
+// {
+//     let diff = -1;
+//     for(let i=0;i<arr.length;i++)
+//     {
+//         for(let j=i+1;j<arr.length;j++)
+//         {
+//               if(arr[i]<arr[j])
+//               {
+//                   diff = diff>arr[j]-[i]?diff=diff:diff=arr[j]-arr[i];
+
+//               }
+//         }
+//     }
+//     return diff;
+// }
+// let arr = [7,1,5,6];
+// console.log(maxdiff(arr));
+//optimal approach
+
+// function maxdiff(arr)
+// {
+//     let min = arr[0];
+//     let diff = -1;
+
+//     for(let j=1;j<arr.length;j++)
+//     {
+//     if(arr[j]>min)
+//     {
+
+//         diff = diff>arr[j]-min?diff=diff:diff=arr[j]-min;
+//     }
+//     else{
+//         min = arr[j];
+//     }
+            
+        
+//     }
+//     return diff;
+// }
+// let arr = [7,1,5,4];
+// console.log(maxdiff(arr));
