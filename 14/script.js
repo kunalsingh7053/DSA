@@ -93,3 +93,25 @@
 // }
 // return ans;
 // };
+
+//Flipping img
+let arr =
+[
+  [1,0,0],
+  [1,1,0]
+  [0,1,0]
+]
+for(let i=0;i<arr.length;i++)
+{
+  let left = 0;
+  let right = arr.length-1;
+  while(left<right)
+  {
+        let temp = arr[i][left];
+        arr[i][left] = arr[i][right];
+        arr[i][right] = temp;
+        left++;
+        right--;
+  }
+}
+console.log(arr);
